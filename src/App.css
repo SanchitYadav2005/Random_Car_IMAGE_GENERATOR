@@ -5,15 +5,12 @@
   margin: 0%;
   padding: 0%;
 }
-body{
-  background: rgb(2,0,36);
-  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,121,118,1) 0%, rgba(0,212,255,1) 100%);
-}
+
+
 .nav-bar{
   display: flex;
   justify-content: center;
-  background: rgb(2,0,36);
-  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(67,9,121,1) 0%, rgba(0,212,255,1) 100%);
+  background-color: #cbf3f0;
   padding: 0.5em;
 }
 .nav-bar h1{
@@ -27,4 +24,57 @@ body{
 .nav-bar img{
   height: 50px;
   border-radius: 0.5em;
+}
+
+.container{
+  margin-left: 30%;
+  margin-top: 1em;
+  position: relative;
+  padding: 2em;
+  /* background-color: #cbf3f0; */
+  background-image: url(https://media.istockphoto.com/photos/car-racing-picture-id180716173?b=1&k=20&m=180716173&s=170667a&w=0&h=VnCC6dJAsTLyk7IPmvLcukN-9fhqRxYkRXpFKlG9t8A=);
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+.container{
+  border: 1px solid #fff;
+  border-radius: 15px;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+  font-size: 2rem;
+  height: 220px;
+  position: relative;
+  width: 370px;
+}
+
+.container__text {
+  color: black;
+  position: absolute;
+  z-index: 2;
+  color: #ede7e3;
+  font-weight: bolder;
+}
+
+.container__text blockquote span{
+  font-weight:bold;
+  color: #ef233c;
+}
+
+main button{
+  margin-left: 34%;
+  font-size: 2em;
+  padding: 0.1em 2em 0.1em 2em ;
+  margin-top: 1.5em;
+  background-color: white;
+  border-radius: 0.2em;
+  cursor: pointer;
+  /* border: hidden; */
+  color: #16697a;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+  transition: all 0.1s;
+}
+
+main button:hover{
+  border: 2px solid black;
+  background-color: #cbf3f0;
 }

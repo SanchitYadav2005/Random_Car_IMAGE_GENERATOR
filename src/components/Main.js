@@ -2,7 +2,7 @@ import React from "react";
 import Data from "../CarData"
 
 
-function Main(){
+function Main() {
 
     // here all are my hooks . for getting and setting the useState.
     const [carName, setCarName] = React.useState("");
@@ -14,7 +14,7 @@ function Main(){
 
     let carInfoArray // seted an outside variable for using it in every function.
     function getCarInfo() {
-        function getCarName(){
+        function getCarName() {
             carInfoArray = Data;
             const randomNum = Math.floor(Math.random() * carInfoArray.length)
             setCarName(Data[randomNum].Name)
@@ -22,28 +22,28 @@ function Main(){
         getCarName();
 
 
-        function getCarCylenders(){
+        function getCarCylenders() {
             carInfoArray = Data;
             const randomNum = Math.floor(Math.random() * carInfoArray.length)
             setCylenders(Data[randomNum].Cylinders)
         }
         getCarCylenders();
 
-        function getHorsePower(){
+        function getHorsePower() {
             carInfoArray = Data;
             const randomNum = Math.floor(Math.random() * carInfoArray.length)
             setHorsePower(Data[randomNum].Horsepower)
         }
         getHorsePower()
 
-        function getYear(){
+        function getYear() {
             carInfoArray = Data;
             const randomNum = Math.floor(Math.random() * carInfoArray.length)
             setYear(Data[randomNum].Year)
         }
-        getYear()            
+        getYear()
 
-        function getCarOrigin(){
+        function getCarOrigin() {
             carInfoArray = Data;
             const randomNum = Math.floor(Math.random() * carInfoArray.length)
             setCarOrigin(Data[randomNum].Origin)
@@ -51,19 +51,23 @@ function Main(){
         getCarOrigin();
 
 
-        
-        
+
+
     }
-    return(
+    return (
         // here is my jsx.
-        <div className="container">
-            <blockquote>Car Name: {carName}</blockquote>
-            <blockquote>Cylenders: {cylenders}</blockquote>
-            <blockquote>Origin: {carOrigin}</blockquote>
-            <blockquote>Horse Power: {horsePower}</blockquote>
-            <blockquote>Year: {year}</blockquote>
+        <main>
+            <div className="container">
+                <div className="container__text">
+                    <blockquote>Car Name: <span>{carName}</span></blockquote>
+                    <blockquote>Cylenders: <span>{cylenders}</span></blockquote>
+                    <blockquote>Origin: <span>{carOrigin}</span></blockquote>
+                    <blockquote>Horse Power: <span>{horsePower}</span></blockquote>
+                    <blockquote>Year: <span>{year}</span></blockquote>
+                </div>
+            </div>
             <button className="btn" onClick={getCarInfo}>Click to get another</button>
-        </div>
+        </main>
     )
 }
 
